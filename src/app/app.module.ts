@@ -1,18 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { AppComponent } from './app.component';
+import { firebaseConfig } from '../environments/firebase'
+import { PersonComponent } from './person/person.component';
+import { PersonService } from './shared/services/person.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    PersonService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
