@@ -1,7 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<app-person></app-person>
+<nav>
+  <ul>
+    <li>
+      <button [routerLink]="['/home']">
+        Select Names
+      </button>
+    </li>
+    <li>
+      <button [routerLink]="['/register']">
+        Register...
+      </button>
+    </li>
+  </ul>
+</nav>
+
+
+<router-outlet>
+</router-outlet>

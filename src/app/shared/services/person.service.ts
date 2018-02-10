@@ -16,4 +16,10 @@ export class PersonService {
     return this.db.list('people').valueChanges();
 
   }
+
+  setPersons(data) {
+    // return this.db.list('people').valueChanges();
+    const items = this.db.list('people');
+    items.push(data);
+  }
 }

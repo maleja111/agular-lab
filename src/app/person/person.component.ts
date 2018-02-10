@@ -1,8 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { PersonService } from '../shared/services/person.service';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-person',
@@ -10,7 +8,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./person.component.css']
 })
 export class PersonComponent implements OnInit {
-
+  title = 'Random User';
 
   // public person: Observable<any[]>;
   public person: any;
