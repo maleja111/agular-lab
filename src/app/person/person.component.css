@@ -1,0 +1,8 @@
+.showUsers {
+    padding: 1rem;
+    border: 2px solid #ccc;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    margin-left: 800px;
+}
