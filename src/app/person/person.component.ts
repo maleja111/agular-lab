@@ -12,8 +12,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class PersonComponent implements OnInit {
 
 
-  public person: Observable<any[]>;
-  items;
+  // public person: Observable<any[]>;
+  public person: any;
   constructor(private personService: PersonService) {
   }
 
@@ -33,7 +33,7 @@ export class PersonComponent implements OnInit {
   getPersonData() {
     // console.log('This is the service: ', );
     this.personService.getPersons().subscribe(people => {
-      this.items = people;
+      this.person = people[Math.floor(Math.random() * people.length)];
       console.log('This is the service: ', people);
       // return people;
     });

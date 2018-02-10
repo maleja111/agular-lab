@@ -1,5 +1,16 @@
-<div class="showUsers">
-  <li *ngFor="let item of items">
-    Name: {{item.name}} -> Gender: {{item.gender}}
-  </li>
+<div class="showUsers" *ngIf="person">
+  <!-- {{person | json}} {{person.name | json}} {{person.gender | json}} -->
+  <!-- <li *ngFor="let item of items"> -->
+  <!-- </li> -->
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+    </tr>
+    <tr>
+      <td>{{person.name}}</td>
+      <td>{{person.gender}}</td>
+    </tr>
+  </table>
 </div>
