@@ -6,3 +6,12 @@
     width: 300px;
     margin-left: 800px;
 }
+
+.form-horizontal {
+    text-align: center;
+    border: 2px solid #ccc;
+    justify-content: center;
+    width: 300px;
+    margin-left: 800px;
+    margin-bottom: 20px;
+}
